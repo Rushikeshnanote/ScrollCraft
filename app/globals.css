@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #ffffff;
+  --background-start: #000000;
+  --background-end: #000000;
+  --product-gradient: #111; /* Will be overridden dynamically */
+}
+
+body {
+  color: var(--foreground);
+  background: var(--product-gradient);
+  transition: background 0.8s ease-in-out;
+  overflow-x: hidden;
+}
+
+/* Customize selection */
+::selection {
+  background-color: #f97316; /* Tailwind orange-500 */
+  color: #ffffff;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.font-sans {
+  font-family: var(--font-outfit), sans-serif;
+}
